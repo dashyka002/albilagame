@@ -1,72 +1,33 @@
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code = {};
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.localVariables = [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects1= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects2= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects2= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects2= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects2= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1= [];
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects2= [];
+gdjs.startCode = {};
+gdjs.startCode.localVariables = [];
+gdjs.startCode.GDbg1Objects1= [];
+gdjs.startCode.GDbg1Objects2= [];
+gdjs.startCode.GDstarttextObjects1= [];
+gdjs.startCode.GDstarttextObjects2= [];
+gdjs.startCode.GDsTextObjects1= [];
+gdjs.startCode.GDsTextObjects2= [];
+gdjs.startCode.GDStartButtonObjects1= [];
+gdjs.startCode.GDStartButtonObjects2= [];
 
 
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.mapOfGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar1Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar2Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar3Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar4Objects1Objects = Hashtable.newFrom({"star1": gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1, "star2": gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1, "star3": gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1, "star4": gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1});
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.eventsList0 = function(runtimeScene) {
+gdjs.startCode.eventsList0 = function(runtimeScene) {
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("StartButton"), gdjs.startCode.GDStartButtonObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+for (var i = 0, k = 0, l = gdjs.startCode.GDStartButtonObjects1.length;i<l;++i) {
+    if ( gdjs.startCode.GDStartButtonObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.startCode.GDStartButtonObjects1[k] = gdjs.startCode.GDStartButtonObjects1[i];
+        ++k;
+    }
+}
+gdjs.startCode.GDStartButtonObjects1.length = k;
 if (isConditionTrue_0) {
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length = 0;
-
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length = 0;
-
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length = 0;
-
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length = 0;
-
-{gdjs.evtTools.object.createObjectFromGroupOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.mapOfGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar1Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar2Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar3Objects1ObjectsGDgdjs_9546_95951041_95951077_95951079_95951110_95951084_95951077_95951085_95951085_95951072_959532_95951089_95951094_95951077_95951085_95951072Code_9546GDstar4Objects1Objects, "star" + gdjs.evtTools.common.toString(gdjs.randomInRange(1, 4)), gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
-}{for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1[i].getBehavior("Scale").setScale(gdjs.randomFloatInRange(0.5, 3));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1[i].getBehavior("Scale").setScale(gdjs.randomFloatInRange(0.5, 3));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1[i].getBehavior("Scale").setScale(gdjs.randomFloatInRange(0.5, 3));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1[i].getBehavior("Scale").setScale(gdjs.randomFloatInRange(0.5, 3));
-}
-}{for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1[i].setAngle(gdjs.randomInRange(0, 360));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1[i].setAngle(gdjs.randomInRange(0, 360));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1[i].setAngle(gdjs.randomInRange(0, 360));
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1[i].setAngle(gdjs.randomInRange(0, 360));
-}
-}{for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1[i].addPolarForce(gdjs.randomInRange(0, 360), 10, 1);
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1[i].addPolarForce(gdjs.randomInRange(0, 360), 10, 1);
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1[i].addPolarForce(gdjs.randomInRange(0, 360), 10, 1);
-}
-for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length ;i < len;++i) {
-    gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1[i].addPolarForce(gdjs.randomInRange(0, 360), 10, 1);
-}
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "banana", false);
 }}
 
 }
@@ -74,35 +35,31 @@ for(var i = 0, len = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_
 
 };
 
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.func = function(runtimeScene) {
+gdjs.startCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects2.length = 0;
+gdjs.startCode.GDbg1Objects1.length = 0;
+gdjs.startCode.GDbg1Objects2.length = 0;
+gdjs.startCode.GDstarttextObjects1.length = 0;
+gdjs.startCode.GDstarttextObjects2.length = 0;
+gdjs.startCode.GDsTextObjects1.length = 0;
+gdjs.startCode.GDsTextObjects2.length = 0;
+gdjs.startCode.GDStartButtonObjects1.length = 0;
+gdjs.startCode.GDStartButtonObjects2.length = 0;
 
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.eventsList0(runtimeScene);
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDNewTiledSpriteObjects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar1Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar2Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar3Objects2.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects1.length = 0;
-gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code.GDstar4Objects2.length = 0;
+gdjs.startCode.eventsList0(runtimeScene);
+gdjs.startCode.GDbg1Objects1.length = 0;
+gdjs.startCode.GDbg1Objects2.length = 0;
+gdjs.startCode.GDstarttextObjects1.length = 0;
+gdjs.startCode.GDstarttextObjects2.length = 0;
+gdjs.startCode.GDsTextObjects1.length = 0;
+gdjs.startCode.GDsTextObjects2.length = 0;
+gdjs.startCode.GDStartButtonObjects1.length = 0;
+gdjs.startCode.GDStartButtonObjects2.length = 0;
 
 
 return;
 
 }
 
-gdjs['_1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code'] = gdjs._1041_1077_1079_1110_1084_1077_1085_1085_1072_32_1089_1094_1077_1085_1072Code;
+gdjs['startCode'] = gdjs.startCode;
