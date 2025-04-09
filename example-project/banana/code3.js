@@ -106,7 +106,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.jungleCode.mapOfGDgdjs_9546jungleCode_9546GDtigerObjects1Objects, gdjs.jungleCode.mapOfGDgdjs_9546jungleCode_9546GDCoinObjects1Objects, false, runtimeScene, false);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9846996);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(11850652);
 }
 }
 if (isConditionTrue_0) {
